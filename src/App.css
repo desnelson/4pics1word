@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500&family=Arbutus+Slab&family=Mate+SC&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500&family=Arbutus+Slab&family=Lora:wght@400;500;600;700&family=Mate+SC&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #36454F;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.image-container{
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 160px 160px;
+  grid-gap: 12px;
+  column-gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.image-container img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  font-family: 'Lora';
+  font-size: 20px;
   color: white;
+  padding-left: 17px;
+}
+.title h1{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.title span{
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 400;
+}
+.answer{
+  text-align: center;
+  padding: 20px;
+}
+.letter-bank{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 55px 55px 55px 55px 55px;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+}
+.letter{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: black 1px solid;
+  box-shadow: 2px 2px 2px #00000099;
+}
+.answer-letter{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 33px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+}
+.letter.disabled{
+  color: #36454F;
+  font-size: 0;
+  background: transparent;
+  border: none !important;
+  pointer-events: none;
+  box-shadow: 0px 0px 0px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.submit-button{
+  background: #C2572E;
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+  color: white;
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #DBCF8F;
+  cursor: pointer;
+}
+.button-container{
+  display: flex;
+  justify-content: right;
+  padding: 60px;
+}
+.check-message{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  color: #EFEDE4;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .letter-bank {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .submit-button{
+    background: #C2572E;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    color: white;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 #DBCF8F;
+    cursor: pointer;
+  }
+  .title span{
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 400;
   }
 }
